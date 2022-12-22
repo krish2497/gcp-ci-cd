@@ -11,7 +11,7 @@
 	<groupId>com.example.gcp</groupId>
 	<artifactId>ci-cd-gcp-training</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>ci-cd-gcp-training</name>
 	<description>Training project for gcp</description>
 	<properties>
