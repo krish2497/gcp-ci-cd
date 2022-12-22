@@ -8,11 +8,12 @@
 		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.training.gcp</groupId>
-	<artifactId>ci-cd-gcp</artifactId>
+	<groupId>com.example.gcp</groupId>
+	<artifactId>ci-cd-gcp-training</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ci-cd-gcp</name>
-	<description>CI CD project for GCP</description>
+	<packaging>war</packaging>
+	<name>ci-cd-gcp-training</name>
+	<description>Training project for gcp</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -22,6 +23,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
