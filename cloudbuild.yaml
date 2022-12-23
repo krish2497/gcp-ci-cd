@@ -9,9 +9,9 @@ steps:
   args: ['push', 'gcr.io/$PROJECT_ID/gcp-ci-cd:v1']
 
 # Deploy an image from Container Registry to Cloud Run
- - name: 'gcr.io/cloud-builders/gcloud'
-   args: ['beta', 'run', 'deploy', 'gcp-ci-cd', '--image', 'gcr.io/$PROJECT_ID/gcp-ci-cd:v1', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
-   images:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'gcp-ci-cd', '--image', 'gcr.io/$PROJECT_ID/gcp-ci-cd:v1', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
+  images:
     - 'gcr.io/$PROJECT_ID/gcp-ci-cd:v1'
 
 #steps:
