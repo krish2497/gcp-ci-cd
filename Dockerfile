@@ -1,13 +1,13 @@
 # AS <NAME> to name this stage as maven
-FROM maven:3.6.3 AS maven
+FROM maven:3.8.6 AS maven
 
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 # Compile and package the application to an executable JAR
-RUN mvn package 
+RUN mvn clean install spring-boot:repackage 
 
 # For Java 11, 
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM openjdk:17-jdk-slim
 
 ARG JAR_FILE=ci-cd-gcp-training.jar
 
