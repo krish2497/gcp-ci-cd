@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class CurrencyConverter {
 	
 	@GetMapping("/rstousd/{quantity}")
-	public ResponseEntity<String> convertRupeestodollar(@PathVariable double quantity) {
+	public ResponseEntity<String> convertRsToUsd(@PathVariable double quantity) {
 		double amount=quantity/80.5;
 		return new ResponseEntity("$ " + amount,HttpStatus.OK);
 		
 	}
 	@GetMapping("/usdtors/{quantity}")
-	public ResponseEntity<String> convertdollartors(@PathVariable double quantity) {
+	public ResponseEntity<String> convertUsdToRs(@PathVariable double quantity) {
 		double amount=quantity*80.5;
 		return new ResponseEntity("Rs " + amount,HttpStatus.OK);
 		
