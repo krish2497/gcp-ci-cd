@@ -13,13 +13,13 @@ public class CurrencyConverter {
 	@GetMapping("/rstousd/{quantity}")
 	public ResponseEntity<String> convertRupeestodollar(@PathVariable double quantity) {
 		double amount=quantity/80.5;
-		return new ResponseEntity("" + amount + " $",HttpStatus.OK);
+		return new ResponseEntity("$ " + amount,HttpStatus.OK);
 		
 	}
 	@GetMapping("/usdtors/{quantity}")
 	public ResponseEntity<String> convertdollartors(@PathVariable double quantity) {
 		double amount=quantity*80.5;
-		return new ResponseEntity("" + amount + " Rs",HttpStatus.OK);
+		return new ResponseEntity("Rs " + amount,HttpStatus.OK);
 		
 	}
 
